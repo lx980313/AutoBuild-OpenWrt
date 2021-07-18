@@ -30,6 +30,11 @@ jobs:
       uses: actions/checkout@master
 
     - name: Initialization environment
+      ssh:
+        description: 'SSH connection to Actions'
+        required: false
+        default: 'true'
+
       env:
         DEBIAN_FRONTEND: noninteractive
       run: |
